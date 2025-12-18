@@ -11,8 +11,8 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1
 /* HEADER */
 .hero{
   background:
-    linear-gradient(rgba(4,12,32,.8),rgba(4,12,32,.8)),
-    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2");
+    linear-gradient(rgba(4,12,32,.85),rgba(4,12,32,.85)),
+    url("https://images.unsplash.com/photo-1549924231-f129b911e442");
   background-size:cover;
   background-position:center;
   padding:90px 20px;
@@ -32,8 +32,8 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1
   font-weight:bold;
   background:#f7b500;
   color:#08142f;
-  padding:10px 16px;
-  border-radius:8px;
+  padding:10px 18px;
+  border-radius:10px;
 }
 
 .hero-content{
@@ -115,7 +115,7 @@ h2{text-align:center;margin-bottom:40px}
 
   <div class="hero-content">
     <h1>Dana Tunai Cepat & Aman</h1>
-    <p>Jaminan BPKB Motor • Mobil • Truk • Sertifikat  
+    <p>Jaminan BPKB Motor • Mobil • Truk • Sertifikat<br>
     Mitra perusahaan pembiayaan resmi</p>
     <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi</button>
   </div>
@@ -130,7 +130,7 @@ h2{text-align:center;margin-bottom:40px}
   <img src="https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52">
   <div>
     <h3>BPKB Motor</h3>
-    <p>Motor matic, bebek, sport. Proses cepat.</p>
+    <p>Motor matic, bebek, sport.</p>
   </div>
 </div>
 
@@ -143,7 +143,7 @@ h2{text-align:center;margin-bottom:40px}
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+  <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7">
   <div>
     <h3>Truk / Alat Berat</h3>
     <p>Kendaraan niaga & operasional.</p>
@@ -198,15 +198,11 @@ h2{text-align:center;margin-bottom:40px}
   <option>Pick Up</option>
 </select>
 
-<select id="tahun">
-  <script>
-    for(let i=2001;i<=2025;i++){
-      document.write(`<option>${i}</option>`)
-    }
-  </script>
-</select>
+<!-- TAHUN (FIX) -->
+<select id="tahun"></select>
 
-<input id="dana" placeholder="Estimasi Dana (Rp)">
+<!-- ESTIMASI DANA (FIX) -->
+<select id="dana"></select>
 
 <select id="tenor">
   <option>6 Bulan</option>
@@ -221,6 +217,19 @@ h2{text-align:center;margin-bottom:40px}
 </section>
 
 <script>
+// GENERATE TAHUN
+const tahunSelect = document.getElementById("tahun");
+const currentYear = new Date().getFullYear();
+for(let y = 2000; y <= currentYear; y++){
+  tahunSelect.innerHTML += `<option>${y}</option>`;
+}
+
+// GENERATE DANA (500rb kelipatan)
+const danaSelect = document.getElementById("dana");
+for(let d = 500000; d <= 50000000; d += 500000){
+  danaSelect.innerHTML += `<option>Rp ${d.toLocaleString("id-ID")}</option>`;
+}
+
 function kirimWA(){
 const msg = `
 Halo SAB,
@@ -235,7 +244,7 @@ Produk: ${produk.value}
 Merk: ${merk.value}
 Tipe: ${tipe.value}
 Tahun: ${tahun.value}
-Estimasi Dana: Rp ${dana.value}
+Estimasi Dana: ${dana.value}
 Tenor: ${tenor.value}
 
 Mohon dibantu simulasi & solusi terbaik.
