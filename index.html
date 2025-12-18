@@ -1,117 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAB – Solusi Aman BPKB</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f6f8;
-  color: #111;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f8;
+  color:#111;
 }
 
 /* HEADER */
-.hero {
+.hero{
   background:
-    linear-gradient(rgba(6,15,40,0.85), rgba(6,15,40,0.85)),
-    url("https://images.unsplash.com/photo-1549924231-f129b911e442");
-  background-size: cover;
-  background-position: center;
-  padding: 90px 20px;
-  text-align: center;
-  color: #fff;
+    linear-gradient(rgba(5,15,40,.85), rgba(5,15,40,.85)),
+    url("header.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:90px 20px;
+  text-align:center;
+  color:#fff;
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
 }
+.hero p{opacity:.9}
 
-.hero p {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.hero button {
-  margin-top: 25px;
-  padding: 14px 28px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  background: #f7b500;
-  cursor: pointer;
+.hero button{
+  margin-top:25px;
+  padding:14px 28px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  background:#f7b500;
+  cursor:pointer;
 }
 
 /* SECTION */
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
+h2{text-align:center;margin-bottom:40px}
 
 /* PRODUK */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
 }
-
-.card div {
-  padding: 16px;
-}
-
-.card h3 {
-  margin: 0 0 8px;
-}
+.card div{padding:16px}
 
 /* FORM */
-.form-box {
-  background: #08142f;
-  border-radius: 20px;
-  padding: 30px;
-  color: #fff;
-  max-width: 700px;
-  margin: auto;
+.form-box{
+  background:#08142f;
+  color:#fff;
+  padding:30px;
+  border-radius:20px;
+  max-width:700px;
+  margin:auto;
 }
 
 .form-box input,
-.form-box select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
-  border-radius: 8px;
-  border: none;
+.form-box select{
+  width:100%;
+  padding:12px;
+  margin-bottom:14px;
+  border:none;
+  border-radius:8px;
 }
 
-.form-box button {
-  width: 100%;
-  padding: 16px;
-  font-size: 16px;
-  border-radius: 30px;
-  border: none;
-  background: #f7b500;
-  cursor: pointer;
+.form-box button{
+  width:100%;
+  padding:16px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  background:#f7b500;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -120,86 +104,90 @@ h2 {
 
 <!-- HEADER -->
 <div class="hero">
-  <h1>Solusi Aman Dana Tunai<br/>Jaminan BPKB & Sertifikat</h1>
-  <p>Platform penghubung ke perusahaan pembiayaan resmi</p>
-  <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi Sekarang</button>
+  <h1>Solusi Aman Dana Tunai</h1>
+  <p>Jaminan BPKB & Sertifikat • Mitra Multifinance Resmi</p>
+  <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi</button>
 </div>
 
 <!-- PRODUK -->
 <section>
-  <h2>Produk Utama SAB</h2>
-  <div class="products">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52">
-      <div>
-        <h3>BPKB Motor</h3>
-        <p>Pinjaman dana tunai jaminan motor, proses cepat.</p>
-      </div>
-    </div>
+<h2>Produk Utama SAB</h2>
+<div class="products">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
-      <div>
-        <h3>BPKB Mobil</h3>
-        <p>Dana besar dengan jaminan mobil.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
-      <div>
-        <h3>Truk / Alat Berat</h3>
-        <p>Pembiayaan kendaraan niaga & alat berat.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-      <div>
-        <h3>Sertifikat (SHM)</h3>
-        <p>Pembiayaan properti dengan plafon besar.</p>
-      </div>
-    </div>
+<div class="card">
+  <img src="motor.jpg">
+  <div>
+    <h3>BPKB Motor</h3>
+    <p>Pembiayaan motor, proses cepat & aman.</p>
   </div>
+</div>
+
+<div class="card">
+  <img src="mobil.jpg">
+  <div>
+    <h3>BPKB Mobil</h3>
+    <p>Dana besar dengan jaminan mobil.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="truk.jpg">
+  <div>
+    <h3>Truk / Alat Berat</h3>
+    <p>Pembiayaan kendaraan niaga.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="sertifikat.jpg">
+  <div>
+    <h3>Sertifikat (SHM)</h3>
+    <p>Pembiayaan properti plafon besar.</p>
+  </div>
+</div>
+
+</div>
 </section>
 
 <!-- FORM -->
 <section id="form">
-  <h2>Simulasi & Konsultasi</h2>
-  <div class="form-box">
-    <input id="nama" placeholder="Nama Lengkap">
-    <input id="hp" placeholder="Nomor HP">
-    <input id="alamat" placeholder="Alamat Domisili">
+<h2>Simulasi & Konsultasi</h2>
+<div class="form-box">
 
-    <select id="produk">
-      <option>BPKB Motor</option>
-      <option>BPKB Mobil</option>
-      <option>Truk / Alat Berat</option>
-      <option>Sertifikat (SHM)</option>
-    </select>
+<input id="nama" placeholder="Nama Lengkap">
+<input id="hp" placeholder="Nomor HP">
+<input id="alamat" placeholder="Alamat">
 
-    <input id="merk" placeholder="Merk Unit">
-    <input id="tipe" placeholder="Tipe Unit">
-    <input id="tahun" placeholder="Tahun Unit">
-    <input id="dana" placeholder="Estimasi Dana (Rp)">
+<select id="produk">
+  <option>BPKB Motor</option>
+  <option>BPKB Mobil</option>
+  <option>Truk / Alat Berat</option>
+  <option>Sertifikat (SHM)</option>
+</select>
 
-    <select id="tenor">
-      <option>6 Bulan</option>
-      <option>12 Bulan</option>
-      <option>24 Bulan</option>
-      <option>36 Bulan</option>
-    </select>
+<input id="merk" placeholder="Merk Unit">
+<input id="tipe" placeholder="Tipe Unit">
+<input id="tahun" placeholder="Tahun Unit">
+<input id="dana" placeholder="Estimasi Dana (Rp)">
 
-    <button onclick="kirimWA()">Kirim & Konsultasi WhatsApp</button>
-  </div>
+<select id="tenor">
+  <option>6 Bulan</option>
+  <option>12 Bulan</option>
+  <option>24 Bulan</option>
+  <option>36 Bulan</option>
+</select>
+
+<button onclick="kirimWA()">Kirim ke WhatsApp</button>
+
+</div>
 </section>
 
 <script>
-function kirimWA() {
-  const text = `
+function kirimWA(){
+const text = `
 Halo SAB,
 
-Saya ingin mengajukan pembiayaan:
+Saya ingin mengajukan pembiayaan.
 
 Nama: ${nama.value}
 HP: ${hp.value}
@@ -215,10 +203,10 @@ Tenor: ${tenor.value}
 Mohon dibantu simulasi & solusi terbaik.
 `;
 
-  window.open(
-    "https://wa.me/6285159332327?text=" + encodeURIComponent(text),
-    "_blank"
-  );
+window.open(
+"https://wa.me/6285159332327?text="+encodeURIComponent(text),
+"_blank"
+);
 }
 </script>
 
