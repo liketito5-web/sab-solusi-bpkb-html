@@ -1,230 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>SAB – Solusi Aman BPKB</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Platform penghubung ke perusahaan pembiayaan resmi. Solusi aman dana tunai jaminan BPKB & Sertifikat." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAB – Solusi Aman BPKB</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
 
-    header {
-      background: linear-gradient(135deg, #020617, #0f172a);
-      color: white;
-      padding: 24px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+header {
+  background:
+    linear-gradient(rgba(10,20,50,.8), rgba(10,20,50,.8)),
+    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c8");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 90px 20px;
+  text-align: center;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: bold;
-      font-size: 22px;
-    }
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 
-    .logo svg {
-      width: 46px;
-      height: 46px;
-    }
+header p {
+  font-size: 16px;
+  opacity: .9;
+}
 
-    .cta {
-      background: #facc15;
-      color: #020617;
-      padding: 10px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.btn {
+  background: #f5b000;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 25px;
+}
 
-    .hero {
-      background: linear-gradient(180deg, #020617, #1e293b);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 16px;
-    }
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
 
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 28px;
-      color: #cbd5f5;
-    }
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
 
-    .btn-main {
-      background: #facc15;
-      color: #020617;
-      padding: 14px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.card h3 {
+  margin: 15px;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.card p {
+  margin: 0 15px 20px;
+  font-size: 14px;
+  color: #555;
+}
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+.form-box {
+  background: #0b1633;
+  color: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+}
 
-    .card img {
-      width: 100%;
-      max-height: 140px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
+.form-box input, .form-box select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+}
 
-    .simulasi {
-      background: #020617;
-      color: white;
-      border-radius: 20px;
-      padding: 40px;
-    }
+.form-box button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 30px;
+  border: none;
+  background: #f5b000;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .simulasi label {
-      display: block;
-      margin-top: 16px;
-      margin-bottom: 6px;
-    }
-
-    .simulasi select, .simulasi input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-    }
-
-    .simulasi button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 14px;
-      background: #facc15;
-      border: none;
-      border-radius: 999px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #020617;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-  </style>
+footer {
+  background: #0b1633;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">
-    <!-- LOGO SAB SVG -->
-    <svg viewBox="0 0 64 64" fill="none">
-      <path d="M32 4L8 14v18c0 16 10 24 24 28 14-4 24-12 24-28V14L32 4z" fill="#FACC15"/>
-      <path d="M20 30l8 8 16-16" stroke="#020617" stroke-width="5" fill="none"/>
-    </svg>
-    <span>SAB</span>
-  </div>
-
-  <a class="cta" href="https://wa.me/6285159332327" target="_blank">Konsultasi WA</a>
+  <h1>Solusi Aman Dana Tunai<br>Jaminan BPKB & Sertifikat</h1>
+  <p>Pembiayaan cepat, aman, dan transparan</p>
+  <a href="#form" class="btn">Ajukan Sekarang</a>
 </header>
 
-<div class="hero">
-  <h1>Solusi Aman Dana Tunai<br>Jaminan BPKB & Sertifikat</h1>
-  <p>Platform penghubung ke perusahaan pembiayaan resmi & terpercaya.</p>
-  <a class="btn-main" href="#simulasi">Cek Simulasi Sekarang</a>
-</div>
-
 <section>
-  <h2>Produk Utama SAB</h2>
+  <h2 class="section-title">Produk Utama SAB</h2>
+
   <div class="products">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1558980664-10ea7c06fa45" alt="">
+      <img src="https://images.unsplash.com/photo-1619767886558-efdc7b7f04f2">
       <h3>BPKB Motor</h3>
-      <p>Dana cepat untuk kebutuhan pribadi & usaha.</p>
+      <p>Dana tunai cepat untuk kebutuhan pribadi & usaha.</p>
     </div>
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="">
+      <img src="https://images.unsplash.com/photo-1549921296-3c9c4e1f1f98">
       <h3>BPKB Mobil</h3>
-      <p>Plafon besar dengan tenor fleksibel.</p>
+      <p>Pencairan besar dengan tenor fleksibel.</p>
     </div>
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1597008641621-53c5b7c3a6e6" alt="">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
       <h3>Truk / Alat Berat</h3>
-      <p>Solusi pembiayaan kendaraan niaga.</p>
+      <p>Pembiayaan kendaraan niaga & proyek.</p>
     </div>
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
       <h3>Sertifikat (SHM)</h3>
-      <p>Pembiayaan properti hingga miliaran rupiah.</p>
+      <p>Plafon besar dengan jaminan properti.</p>
     </div>
   </div>
 </section>
 
-<section id="simulasi">
-  <div class="simulasi">
-    <h2>Simulasi Pengajuan</h2>
+<section id="form">
+  <h2 class="section-title">Form Pengajuan & Simulasi</h2>
 
-    <label>Jenis Jaminan</label>
-    <select>
+  <div class="form-box">
+    <input id="nama" placeholder="Nama Lengkap">
+    <input id="hp" placeholder="Nomor HP">
+    <input id="alamat" placeholder="Alamat Domisili">
+
+    <select id="produk">
       <option>BPKB Motor</option>
       <option>BPKB Mobil</option>
       <option>Truk / Alat Berat</option>
       <option>Sertifikat (SHM)</option>
     </select>
 
-    <label>Estimasi Dana (Rp)</label>
-    <input type="number" placeholder="contoh: 50000000">
-
-    <label>Tenor (bulan)</label>
-    <select>
-      <option>12</option>
-      <option>24</option>
-      <option>36</option>
+    <input id="merk" placeholder="Merk Unit">
+    <input id="tipe" placeholder="Tipe Unit">
+    <input id="tahun" placeholder="Tahun Unit">
+    <input id="dana" placeholder="Estimasi Dana (Rp)">
+    
+    <select id="tenor">
+      <option>6 Bulan</option>
+      <option>12 Bulan</option>
+      <option>24 Bulan</option>
+      <option>36 Bulan</option>
     </select>
 
-    <button onclick="window.open('https://wa.me/6285159332327','_blank')">
-      Lihat Estimasi & Konsultasi
-    </button>
+    <button onclick="kirimWA()">Simulasi & Konsultasi WhatsApp</button>
   </div>
 </section>
 
 <footer>
-  © SAB – Solusi Aman BPKB | 0851-5933-2327
+  © SAB – Solusi Aman BPKB | WhatsApp 0851 5933 2327
 </footer>
+
+<script>
+function kirimWA() {
+  const pesan =
+`Halo SAB, saya ingin mengajukan pembiayaan.
+
+Nama       : ${nama.value}
+No HP      : ${hp.value}
+Alamat     : ${alamat.value}
+
+Produk     : ${produk.value}
+Merk Unit  : ${merk.value}
+Tipe Unit  : ${tipe.value}
+Tahun Unit : ${tahun.value}
+
+Estimasi Dana : Rp ${dana.value}
+Tenor         : ${tenor.value}`;
+
+  window.open(
+    "https://wa.me/6285159332327?text=" + encodeURIComponent(pesan),
+    "_blank"
+  );
+}
+</script>
 
 </body>
 </html>
