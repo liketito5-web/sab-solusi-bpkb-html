@@ -12,7 +12,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1
 .hero{
   background:
     linear-gradient(rgba(4,12,32,.85),rgba(4,12,32,.85)),
-    url("https://images.unsplash.com/photo-1549924231-f129b911e442");
+    url("header.jpg");
   background-size:cover;
   background-position:center;
   padding:90px 20px;
@@ -115,8 +115,7 @@ h2{text-align:center;margin-bottom:40px}
 
   <div class="hero-content">
     <h1>Dana Tunai Cepat & Aman</h1>
-    <p>Jaminan BPKB Motor • Mobil • Truk • Sertifikat<br>
-    Mitra perusahaan pembiayaan resmi</p>
+    <p>Jaminan BPKB Motor • Mobil • Truk • Sertifikat</p>
     <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi</button>
   </div>
 </div>
@@ -127,15 +126,15 @@ h2{text-align:center;margin-bottom:40px}
 <div class="products">
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52">
+  <img src="motor.jpg">
   <div>
     <h3>BPKB Motor</h3>
-    <p>Motor matic, bebek, sport.</p>
+    <p>Pembiayaan motor semua jenis.</p>
   </div>
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+  <img src="mobil.jpg">
   <div>
     <h3>BPKB Mobil</h3>
     <p>Dana besar dengan tenor fleksibel.</p>
@@ -143,15 +142,15 @@ h2{text-align:center;margin-bottom:40px}
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7">
+  <img src="truk.jpg">
   <div>
     <h3>Truk / Alat Berat</h3>
-    <p>Kendaraan niaga & operasional.</p>
+    <p>Pembiayaan kendaraan niaga.</p>
   </div>
 </div>
 
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+  <img src="sertifikat.jpg">
   <div>
     <h3>Sertifikat (SHM)</h3>
     <p>Pembiayaan properti plafon besar.</p>
@@ -198,10 +197,10 @@ h2{text-align:center;margin-bottom:40px}
   <option>Pick Up</option>
 </select>
 
-<!-- TAHUN (FIX) -->
+<!-- TAHUN 1900–2025 -->
 <select id="tahun"></select>
 
-<!-- ESTIMASI DANA (FIX) -->
+<!-- ESTIMASI DANA SAMPAI 1 TRILIUN -->
 <select id="dana"></select>
 
 <select id="tenor">
@@ -217,24 +216,21 @@ h2{text-align:center;margin-bottom:40px}
 </section>
 
 <script>
-// GENERATE TAHUN
-const tahunSelect = document.getElementById("tahun");
-const currentYear = new Date().getFullYear();
-for(let y = 2000; y <= currentYear; y++){
-  tahunSelect.innerHTML += `<option>${y}</option>`;
+// TAHUN 1900–2025
+const tahun = document.getElementById("tahun");
+for(let y=1900;y<=2025;y++){
+  tahun.innerHTML += `<option>${y}</option>`;
 }
 
-// GENERATE DANA (500rb kelipatan)
-const danaSelect = document.getElementById("dana");
-for(let d = 500000; d <= 50000000; d += 500000){
-  danaSelect.innerHTML += `<option>Rp ${d.toLocaleString("id-ID")}</option>`;
+// DANA 500RB – 1 TRILIUN
+const dana = document.getElementById("dana");
+for(let d=500000; d<=1000000000000; d+=500000){
+  dana.innerHTML += `<option>Rp ${d.toLocaleString("id-ID")}</option>`;
 }
 
 function kirimWA(){
 const msg = `
 Halo SAB,
-
-Saya ingin mengajukan pembiayaan:
 
 Nama: ${nama.value}
 HP: ${hp.value}
