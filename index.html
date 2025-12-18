@@ -4,58 +4,145 @@
   <meta charset="UTF-8" />
   <title>SAB – Solusi Aman BPKB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Platform penghubung ke perusahaan pembiayaan resmi. Dana tunai jaminan BPKB & Sertifikat." />
+  <meta name="description" content="Platform penghubung ke perusahaan pembiayaan resmi. Solusi aman dana tunai jaminan BPKB & Sertifikat." />
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #1f2937;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
     }
+
     header {
-      background: linear-gradient(120deg, #0f172a, #1e293b);
+      background: linear-gradient(135deg, #020617, #0f172a);
       color: white;
-      padding: 50px 20px;
-      text-align: center;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      font-size: 22px;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 24px;
-      background: #f59e0b;
-      color: #111827;
+
+    .logo svg {
+      width: 46px;
+      height: 46px;
+    }
+
+    .cta {
+      background: #facc15;
+      color: #020617;
+      padding: 10px 18px;
+      border-radius: 999px;
       text-decoration: none;
-      border-radius: 25px;
       font-weight: bold;
     }
+
+    .hero {
+      background: linear-gradient(180deg, #020617, #1e293b);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: #cbd5f5;
+    }
+
+    .btn-main {
+      background: #facc15;
+      color: #020617;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: white;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-align: center;
     }
+
+    .card img {
+      width: 100%;
+      max-height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .simulasi {
+      background: #020617;
+      color: white;
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .simulasi label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+    }
+
+    .simulasi select, .simulasi input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .simulasi button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background: #facc15;
+      border: none;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     footer {
-      background: #0f172a;
+      background: #020617;
       color: #cbd5f5;
-      padding: 20px;
       text-align: center;
-      font-size: 14px;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -63,25 +150,80 @@
 <body>
 
 <header>
-  <h1>Solusi Aman Dana Tunai<br>Jaminan BPKB & Sertifikat</h1>
-  <p>Platform penghubung ke perusahaan pembiayaan resmi</p>
-  <a class="btn" href="https://wa.me/6285159332327" target="_blank">
-    Konsultasi WhatsApp
-  </a>
+  <div class="logo">
+    <!-- LOGO SAB SVG -->
+    <svg viewBox="0 0 64 64" fill="none">
+      <path d="M32 4L8 14v18c0 16 10 24 24 28 14-4 24-12 24-28V14L32 4z" fill="#FACC15"/>
+      <path d="M20 30l8 8 16-16" stroke="#020617" stroke-width="5" fill="none"/>
+    </svg>
+    <span>SAB</span>
+  </div>
+
+  <a class="cta" href="https://wa.me/6285159332327" target="_blank">Konsultasi WA</a>
 </header>
 
+<div class="hero">
+  <h1>Solusi Aman Dana Tunai<br>Jaminan BPKB & Sertifikat</h1>
+  <p>Platform penghubung ke perusahaan pembiayaan resmi & terpercaya.</p>
+  <a class="btn-main" href="#simulasi">Cek Simulasi Sekarang</a>
+</div>
+
 <section>
-  <h2>Produk Utama</h2>
+  <h2>Produk Utama SAB</h2>
   <div class="products">
-    <div class="card"><h3>BPKB Motor</h3></div>
-    <div class="card"><h3>BPKB Mobil</h3></div>
-    <div class="card"><h3>Truk / Alat Berat</h3></div>
-    <div class="card"><h3>Sertifikat (SHM)</h3></div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558980664-10ea7c06fa45" alt="">
+      <h3>BPKB Motor</h3>
+      <p>Dana cepat untuk kebutuhan pribadi & usaha.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="">
+      <h3>BPKB Mobil</h3>
+      <p>Plafon besar dengan tenor fleksibel.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1597008641621-53c5b7c3a6e6" alt="">
+      <h3>Truk / Alat Berat</h3>
+      <p>Solusi pembiayaan kendaraan niaga.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="">
+      <h3>Sertifikat (SHM)</h3>
+      <p>Pembiayaan properti hingga miliaran rupiah.</p>
+    </div>
+  </div>
+</section>
+
+<section id="simulasi">
+  <div class="simulasi">
+    <h2>Simulasi Pengajuan</h2>
+
+    <label>Jenis Jaminan</label>
+    <select>
+      <option>BPKB Motor</option>
+      <option>BPKB Mobil</option>
+      <option>Truk / Alat Berat</option>
+      <option>Sertifikat (SHM)</option>
+    </select>
+
+    <label>Estimasi Dana (Rp)</label>
+    <input type="number" placeholder="contoh: 50000000">
+
+    <label>Tenor (bulan)</label>
+    <select>
+      <option>12</option>
+      <option>24</option>
+      <option>36</option>
+    </select>
+
+    <button onclick="window.open('https://wa.me/6285159332327','_blank')">
+      Lihat Estimasi & Konsultasi
+    </button>
   </div>
 </section>
 
 <footer>
-  © SAB – Solusi Aman BPKB | 0851 5933 2327
+  © SAB – Solusi Aman BPKB | 0851-5933-2327
 </footer>
 
 </body>
