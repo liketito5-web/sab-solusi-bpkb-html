@@ -6,53 +6,62 @@
 <title>SAB – Solusi Aman BPKB</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f4f6f8;
-  color:#111;
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#111}
 
 /* HEADER */
 .hero{
   background:
-    linear-gradient(rgba(5,15,40,.85), rgba(5,15,40,.85)),
-    url("header.jpg");
+    linear-gradient(rgba(4,12,32,.8),rgba(4,12,32,.8)),
+    url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2");
   background-size:cover;
   background-position:center;
   padding:90px 20px;
-  text-align:center;
   color:#fff;
 }
 
-.hero h1{
-  font-size:36px;
-  margin-bottom:10px;
+.header-box{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  background:#f7b500;
+  color:#08142f;
+  padding:10px 16px;
+  border-radius:8px;
+}
+
+.hero-content{
+  max-width:600px;
+  margin-top:60px;
+}
+
+.hero h1{font-size:38px;margin:0 0 10px}
 .hero p{opacity:.9}
 
 .hero button{
   margin-top:25px;
-  padding:14px 28px;
-  font-size:16px;
+  padding:14px 30px;
   border:none;
   border-radius:30px;
+  font-size:16px;
   background:#f7b500;
   cursor:pointer;
 }
 
 /* SECTION */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
+section{max-width:1100px;margin:auto;padding:60px 20px}
 h2{text-align:center;margin-bottom:40px}
 
 /* PRODUK */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:20px;
 }
 
@@ -62,25 +71,21 @@ h2{text-align:center;margin-bottom:40px}
   overflow:hidden;
   box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
+.card img{width:100%;height:180px;object-fit:cover}
 .card div{padding:16px}
 
 /* FORM */
-.form-box{
+.form-wrap{
   background:#08142f;
   color:#fff;
-  padding:30px;
+  padding:40px;
   border-radius:20px;
-  max-width:700px;
+  max-width:750px;
   margin:auto;
 }
 
-.form-box input,
-.form-box select{
+.form-wrap input,
+.form-wrap select{
   width:100%;
   padding:12px;
   margin-bottom:14px;
@@ -88,13 +93,13 @@ h2{text-align:center;margin-bottom:40px}
   border-radius:8px;
 }
 
-.form-box button{
+.form-wrap button{
   width:100%;
   padding:16px;
-  font-size:16px;
   border:none;
   border-radius:30px;
   background:#f7b500;
+  font-size:16px;
   cursor:pointer;
 }
 </style>
@@ -104,42 +109,49 @@ h2{text-align:center;margin-bottom:40px}
 
 <!-- HEADER -->
 <div class="hero">
-  <h1>Solusi Aman Dana Tunai</h1>
-  <p>Jaminan BPKB & Sertifikat • Mitra Multifinance Resmi</p>
-  <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi</button>
+  <div class="header-box">
+    <div class="logo">SAB</div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Dana Tunai Cepat & Aman</h1>
+    <p>Jaminan BPKB Motor • Mobil • Truk • Sertifikat  
+    Mitra perusahaan pembiayaan resmi</p>
+    <button onclick="document.getElementById('form').scrollIntoView()">Cek Simulasi</button>
+  </div>
 </div>
 
 <!-- PRODUK -->
 <section>
-<h2>Produk Utama SAB</h2>
+<h2>Produk Pembiayaan</h2>
 <div class="products">
 
 <div class="card">
-  <img src="motor.jpg">
+  <img src="https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52">
   <div>
     <h3>BPKB Motor</h3>
-    <p>Pembiayaan motor, proses cepat & aman.</p>
+    <p>Motor matic, bebek, sport. Proses cepat.</p>
   </div>
 </div>
 
 <div class="card">
-  <img src="mobil.jpg">
+  <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
   <div>
     <h3>BPKB Mobil</h3>
-    <p>Dana besar dengan jaminan mobil.</p>
+    <p>Dana besar dengan tenor fleksibel.</p>
   </div>
 </div>
 
 <div class="card">
-  <img src="truk.jpg">
+  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
   <div>
     <h3>Truk / Alat Berat</h3>
-    <p>Pembiayaan kendaraan niaga.</p>
+    <p>Kendaraan niaga & operasional.</p>
   </div>
 </div>
 
 <div class="card">
-  <img src="sertifikat.jpg">
+  <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
   <div>
     <h3>Sertifikat (SHM)</h3>
     <p>Pembiayaan properti plafon besar.</p>
@@ -151,12 +163,13 @@ h2{text-align:center;margin-bottom:40px}
 
 <!-- FORM -->
 <section id="form">
-<h2>Simulasi & Konsultasi</h2>
-<div class="form-box">
+<h2>Form Simulasi & Konsultasi</h2>
+
+<div class="form-wrap">
 
 <input id="nama" placeholder="Nama Lengkap">
 <input id="hp" placeholder="Nomor HP">
-<input id="alamat" placeholder="Alamat">
+<input id="alamat" placeholder="Alamat Domisili">
 
 <select id="produk">
   <option>BPKB Motor</option>
@@ -165,9 +178,34 @@ h2{text-align:center;margin-bottom:40px}
   <option>Sertifikat (SHM)</option>
 </select>
 
-<input id="merk" placeholder="Merk Unit">
-<input id="tipe" placeholder="Tipe Unit">
-<input id="tahun" placeholder="Tahun Unit">
+<select id="merk">
+  <option>Honda</option>
+  <option>Yamaha</option>
+  <option>Suzuki</option>
+  <option>Kawasaki</option>
+  <option>Toyota</option>
+  <option>Daihatsu</option>
+  <option>Mitsubishi</option>
+  <option>Lainnya</option>
+</select>
+
+<select id="tipe">
+  <option>Matic</option>
+  <option>Manual</option>
+  <option>Bebek</option>
+  <option>SUV</option>
+  <option>MPV</option>
+  <option>Pick Up</option>
+</select>
+
+<select id="tahun">
+  <script>
+    for(let i=2001;i<=2025;i++){
+      document.write(`<option>${i}</option>`)
+    }
+  </script>
+</select>
+
 <input id="dana" placeholder="Estimasi Dana (Rp)">
 
 <select id="tenor">
@@ -177,17 +215,17 @@ h2{text-align:center;margin-bottom:40px}
   <option>36 Bulan</option>
 </select>
 
-<button onclick="kirimWA()">Kirim ke WhatsApp</button>
+<button onclick="kirimWA()">Kirim & Konsultasi WhatsApp</button>
 
 </div>
 </section>
 
 <script>
 function kirimWA(){
-const text = `
+const msg = `
 Halo SAB,
 
-Saya ingin mengajukan pembiayaan.
+Saya ingin mengajukan pembiayaan:
 
 Nama: ${nama.value}
 HP: ${hp.value}
@@ -202,10 +240,9 @@ Tenor: ${tenor.value}
 
 Mohon dibantu simulasi & solusi terbaik.
 `;
-
 window.open(
-"https://wa.me/6285159332327?text="+encodeURIComponent(text),
-"_blank"
+  "https://wa.me/6285159332327?text="+encodeURIComponent(msg),
+  "_blank"
 );
 }
 </script>
